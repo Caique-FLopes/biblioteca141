@@ -1,10 +1,10 @@
 <?php
-require "../config/database.php";
-require "../models/Livro.php";
+require "./config/database.php";
+require "./models/Livro.php";
 
 class LivroController{
     public function cadastrarLivro($titulo, $autor, $genero){
-        $database = new Database();
+        $database = new Banco();
         $bd = $database->conectar();
 
         $livro = new Livro($bd);

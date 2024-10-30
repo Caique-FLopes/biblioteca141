@@ -21,7 +21,8 @@ class Livro{
     }
 
     public function cadastrarLivro(){
-        $query = "INSERT INTO {$this->tabela} (titulo, autor, genero) values ({$this->titulo},{$this->autor}, {$this->genero});";
-        return $this->conexao->query($query);
+        $query = "INSERT INTO {$this->tabela} (titulo, autor, genero) values ('{$this->titulo}','{$this->autor}', '{$this->genero}');";
+        $resultado = $this->conexao->query($query);
+        return $resultado;
     }
 }
