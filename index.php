@@ -11,5 +11,5 @@ switch($acao){
         break;
 
     default:
-        include 'views/formCadastrarLivro.php';
+        include 'views/home.php';
 }
