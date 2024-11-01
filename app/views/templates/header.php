@@ -15,7 +15,11 @@
         </div>
         
         <nav>
-            <button onclick="toggleMenu()">x</button>
+            <button onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Livros</a></li>
@@ -23,9 +27,9 @@
             </ul>
         </nav>
 
-        <div>
+        <div id="user">
             <a href="#">
-                <img src="" alt="">
+                <img src="./views/src/user.svg">
             </a>
         </div>
     </header>
