@@ -15,7 +15,9 @@ body{
     "footer footer footer"
     ;
 }
-
+main{
+    grid-area: main;
+}
 #header-site{
     grid-area: header;
 }

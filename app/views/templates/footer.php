@@ -1,5 +1,4 @@
 
-</main>
 <footer>        
 </footer>
 <script src="./public/js/main.js" type="text/javascript"></script>

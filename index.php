@@ -14,7 +14,10 @@ switch($acao){
         $usuarioController = new UsuarioController();
         $usuarioController->cadastrarUsuario($_POST['nome'],$_POST['email'], $_POST['senha'], $_POST['nascimento']);
     case 'usuario':
-        include 'app/views/usuario/index.php';
+        include 'app/views/usuario/usuario.php';
+    case 'login':
+        $usuarioController = new UsuarioController();
+        $usuarioController->logarUsuario($_POST['usuario'], $_POST['senha']);
     default:
-        include 'app/views/home/index.php';
+        include 'app/views/login/login.php';
 }

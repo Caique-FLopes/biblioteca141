@@ -1,3 +1,4 @@
+</main>
 <aside>
     <menu>
         <li><a href="#">Teste</a></li>

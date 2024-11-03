@@ -1,15 +1,24 @@
 <form action="index.php?acao=cadastrar-usuario" method="post">
-    <label for="nome">Nome:</label>
-    <input type="text" name="nome" id="nome">
+    <div class="row-input">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+    </div>
 
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email">
+    <div class="row-input">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+    </div>
 
-    <label for="senha">Senha:</label>
-    <input type="password" name="senha" id="senha">
+    <div class="row-input">
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha">
+        <button onclick="togglePassword(event, this)" id="btn-password">Ver Senha</button>
+    </div>
 
-    <label for="nascimento">Data de nascimento:</label>
-    <input type="date" name="nascimento" id="nascimento">
-    
+    <div class="row-input">
+        <label for="nascimento">Data de nascimento:</label>
+        <input type="date" name="nascimento" id="nascimento">
+    </div>
+
     <input type="submit" value="Cadastrar">
 </form>

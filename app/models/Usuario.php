@@ -21,4 +21,9 @@ class Usuario implements Crud{
         $resultado = $this->conexao->query($query);        
         return $resultado;
     }
+    public function read(){
+        $query = "SELECT * FROM {$this->tabela} WHERE email = '{$this->email}'";
+        $resultado = $this->conexao->query($query);
+        return $resultado;
+    }
 }
