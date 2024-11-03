@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./views/css/style.css">
+    <link rel="stylesheet" href="./public/css/style.css">
     <title>Document</title>
 </head>
 <body>
     <header id="header-site">
         <div id="box-img">
             <a href="#">
-                <img src="./views/src/logo.png" alt="Livraria Borno">
+                <img src="./public/images/logo.png" alt="Livraria Borno">
             </a>
         </div>
         
@@ -29,13 +29,8 @@
 
         <div id="user">
             <a href="#">
-                <img src="./views/src/user.svg">
+                <img src="./public/images/user.svg">
             </a>
         </div>
     </header>
-
-    <script>
-        function toggleMenu(){
-            document.querySelector('#header-site nav ul').classList.toggle('ativo');
-        }
-    </script>
+    <main>

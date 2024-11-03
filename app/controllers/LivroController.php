@@ -1,6 +1,6 @@
 <?php
-require "./config/database.php";
-require "./models/Livro.php";
+require "app/config/database.php";
+require "app/models/Livro.php";
 
 class LivroController{
     public function cadastrarLivro($titulo, $autor, $genero){
