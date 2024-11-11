@@ -1,5 +1,4 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -7,22 +6,22 @@
     color: #000;
 }
 
-body{
+body {
     display: grid;
-    grid-template-areas: 
-    "header header header"
-    "main main aside"
-    "footer footer footer"
-    ;
+    grid-template-areas:
+        "header header header"
+        "main main aside"
+        "footer footer footer";
 }
-main{
+main {
     grid-area: main;
+    padding: 20px 40px;
 }
-#header-site{
+#header-site {
     grid-area: header;
 }
 
-#header-site{
+#header-site {
     display: flex;
     justify-content: space-evenly;
     padding: 8px 0;
@@ -30,31 +29,31 @@ main{
     width: 100%;
     position: relative;
 }
-#header-site #box-img img{
+#header-site #box-img img {
     aspect-ratio: 1 / 1;
     max-width: 80px;
     max-height: 80px;
 }
-#header-site nav{
+#header-site nav {
     align-content: center;
 }
-#header-site nav button{
+#header-site nav button {
     display: none;
     padding: 10px;
     border: none;
     background-color: unset;
 }
-#header-site nav ul{
+#header-site nav ul {
     display: flex;
     flex-direction: row;
     gap: 25px;
 }
 
 @media (max-width: 768px) {
-    #header-site nav button{
+    #header-site nav button {
         display: block;
     }
-    #header-site nav ul{
+    #header-site nav ul {
         width: 100%;
         padding-bottom: 5px;
         position: absolute;
@@ -66,17 +65,17 @@ main{
         opacity: 0;
         transition: ease 1s;
     }
-    #header-site nav ul.ativo{
+    #header-site nav ul.ativo {
         top: 100%;
         opacity: 1;
     }
 }
 
-#header-site nav ul li{
+#header-site nav ul li {
     position: relative;
 }
-#header-site nav ul li::after{
-    content: '';
+#header-site nav ul li::after {
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -85,23 +84,23 @@ main{
     background: #fff;
     transition: ease-in 3ms;
 }
-#header-site nav ul li:hover::after{
+#header-site nav ul li:hover::after {
     width: 100%;
     animation: hoverItem 0.5s ease-in-out;
 }
-#header-site nav ul li:not(:hover)::after{
+#header-site nav ul li:not(:hover)::after {
     animation: removeHoverItem 0.5s ease-in-out;
 }
-#header-site nav ul li a{
+#header-site nav ul li a {
     display: inline-block;
-    padding: 8px  16px;
+    padding: 8px 16px;
     color: #fff;
 }
-#header-site #user{
+#header-site #user {
     align-content: center;
 }
 
-#header-site #user img{
+#header-site #user img {
     width: 100%;
     max-width: 45px;
     height: 100%;
@@ -110,19 +109,19 @@ main{
 }
 
 @keyframes hoverItem {
-    from{
+    from {
         width: 0%;
     }
-    to{
+    to {
         width: 100%;
     }
 }
 
 @keyframes removeHoverItem {
-    from{
+    from {
         width: 100%;
     }
-    to{
+    to {
         width: 0%;
     }
 }

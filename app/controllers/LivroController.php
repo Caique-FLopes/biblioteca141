@@ -28,10 +28,12 @@ class LivroController{
         $livro = new Livro($this->conectarBd());
         $livro->id = $idLivro;
 
-        if($livro->read())
-            header("Location: index.php?page=listar-livros&id={$livro->id}");
-        else
-            echo  "Livro não encontrado";
+        return  $livro->read();
+    }
+
+    public function buscarLivros(){
+        $livro = new Livro($this->conectarBd());
+        return $livro->readAll();
     }
 
     public function atualizarLivro($idLivro, $arrayInfos){
@@ -50,8 +52,4 @@ class LivroController{
             $livro->delete();
     }
 
-    public function renderTemplateLivro($idLivro){
-        if($this->buscarLivroUnico($idLivro))
-            require_once $_SERVER['DOCUMENT_ROOT'] . "/biblioteca141/app/models/Livro.php";
-    }
 }

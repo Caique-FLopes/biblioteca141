@@ -1,4 +1,10 @@
 <?php
-define('BASE_URL', '/public/');
-header("Location: app/views/pages/livros.php");
-exit();
+
+$acao = isset($_GET['acao']) ? $_GET['acao'] : '';
+
+switch($acao){
+    case 'cadastrar':
+
+    default:
+        include 'app/views/pages/livros.php';
+}
