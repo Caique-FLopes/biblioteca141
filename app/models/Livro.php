@@ -1,5 +1,5 @@
 <?php
-require_once './interfaces/Crud.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/biblioteca141/app/models/interfaces/Crud.php";
 
 class Livro implements Crud{
     private $conexao;
