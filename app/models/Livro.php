@@ -23,7 +23,7 @@ class Livro implements Crud{
     }
 
     public function read(){
-        $query = "SELECT * FROM {$this->tabela} WHERE id = {$this->id};";
+        $query = "SELECT * FROM {$this->tabela} WHERE isbn = {$this->isbn};";
         $resultado = $this->conexao->query($query);
         return $resultado->fetch_assoc();
     }

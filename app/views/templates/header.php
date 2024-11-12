@@ -21,9 +21,9 @@
                 <div></div>
             </button>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Livros</a></li>
-                <li><a href="#">Meu Carrinho</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="index.php?acao=livro">Livros</a></li>
+                <li><a href="index.php?acao=emprestimo">Meus Emprestimos</a></li>
             </ul>
         </nav>
 

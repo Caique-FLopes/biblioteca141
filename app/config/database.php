@@ -15,4 +15,7 @@ class Banco{
             return $this->conexao;
         }
     }
+    public function desconectar(){
+        $this->conexao = $this->conexao->close();
+    }
 }

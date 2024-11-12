@@ -2,9 +2,9 @@
 require_once "app/controllers/LivroController.php";
 require_once "app/views/templates/header.php";
 
-if(isset($_GET['idLivro'])){
+if(isset($_GET['isbn'])){
     $controller = new LivroController();
-    $dadosLivro = $controller->buscarLivroUnico($_GET['idLivro']);
+    $dadosLivro = $controller->buscarLivroUnico($_GET['isbn']);
     echo '<section class="sec-livros unico">';
     require_once 'app/views/templates/templateLivroUnico.php';
     echo '</section>';

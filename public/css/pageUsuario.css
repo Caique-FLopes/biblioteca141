@@ -1,0 +1,53 @@
+form#formInfoUsuario {
+    border: 2px solid #000;
+    border-radius: 15px;
+    box-shadow: -2px 8px 15px 1px #00000070;
+    padding: 20px 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#infosUsuarioForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#headerFormUsuario {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.row-input {
+    display: flex;
+    flex-direction: column;
+}
+
+input:not([type="submit"]) {
+    width: 100%;
+    padding: 2px 4px;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    max-width: 100%;
+}
+
+input[type="submit"] {
+    background-color: rgb(53, 53, 175);
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    font-size: 16px;
+    font-family: sans-serif;
+    border-radius: 4px;
+    transition: ease 1s;
+    align-content: end;
+}
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: rgb(49, 49, 123);
+}

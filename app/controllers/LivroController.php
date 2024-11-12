@@ -1,13 +1,12 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "/biblioteca141/app/config/database.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/biblioteca141/app/models/Livro.php";
+require_once "app/config/database.php";
+require_once "app/models/Livro.php";
 
 class LivroController{
-    public $database;
 
     public function conectarBd(){
-        $this->database = new Banco();
-        return $this->database->conectar();
+        $database = new Banco();
+        return $database->conectar();
     }
 
     public function cadastrarLivro($titulo, $autor, $genero, $descricao, $isbn){
@@ -19,15 +18,14 @@ class LivroController{
         $livro->isbn = $isbn;
 
         if($livro->create())
-            header("Location: livros.php?acao=livro&id={$livro->id}");
+            header("Location: index.php?acao=livro&isbn={$livro->isbn}");
         else
             echo "Erro ao cadastrar livro";
     }
 
-    public function buscarLivroUnico($idLivro){
+    public function buscarLivroUnico($isbn){
         $livro = new Livro($this->conectarBd());
-        $livro->id = $idLivro;
-
+        $livro->isbn = $isbn;
         return  $livro->read();
     }
 
